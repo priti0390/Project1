@@ -1,0 +1,280 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Features\CoreServices\orgService\**" />
+    <EmbeddedResource Remove="Features\CoreServices\orgService\**" />
+    <None Remove="Features\CoreServices\orgService\**" />
+    <SpecFlowFeatureFiles Remove="Features\CoreServices\orgService\**" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\CoreServices\orgService\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Steps\CoreServices\CommonStep.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="App.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Agreements\AGR_001_ValidateAgreementsAPI_GeneralInformation - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Agreements\AGR_006_ValidateAgreementsAPI_Activities_AssignOwner - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Agreements\AGR_007_ValidateAgreementsAPI_Activities_Discard - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Agreements\AGR_008_ValidateAgreementsAPI_Activities_Activate - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Agreements\AGR_013_ValidateAgreementsAPI_Activities_SubmitPIConcurrence - Copy (2).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Agreements\AGR_013_ValidateAgreementsAPI_Activities_SubmitPIConcurrence - Copy (3).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Agreements\AGR_013_ValidateAgreementsAPI_Activities_SubmitPIConcurrence - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Agreements\AGR_016_ValidateAgreementsAPI_Activities_SendForExternalSignature - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\AGR_016_ValidateAgreementsAPI_Activities_AssignOwner.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\CoreServices\DocumentService\CS_001_Validate_DocumentService - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\CoreServices\ListService\POC_001_Validate_ListService - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\CoreServices\ListService\POC_001_Validate_ProfileService_Organization.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\CoreServices\NotificationService\CS_001_Validate_NotificationService - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\CoreServices\ProfileService\POC_001_Validate_ProfileService_Organization - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\CoreServices\TenantService\POC_001_Validate_Tenant_Services - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\CoreServices\TenantService\POC_002_Validate_Tenant_Services - Copy.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0\ExtentReports.dll" />
+    <None Include="bin\Debug\net5.0\ExtentReports.dll.config" />
+    <None Include="bin\Debug\net5.0\ExtentReports.pdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Amazon.CDK.AWS.Cognito" Version="1.115.0" />
+    <PackageReference Include="Amazon.Extensions.CognitoAuthentication" Version="2.2.2" />
+    <PackageReference Include="AWSSDK.CognitoIdentity" Version="3.7.0.78" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.1.19" />
+    <PackageReference Include="ExtentReports" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+    <PackageReference Include="MongoDB.Bson" Version="2.13.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.13.0" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.13.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NUnit" Version="3.13.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+    <PackageReference Include="coverlet.collector" Version="3.0.2" />
+    <PackageReference Include="RazorEngine" Version="3.10.0" />
+    <PackageReference Include="RazorEngine.NetCore" Version="3.1.0" />
+    <PackageReference Include="SpecFlow" Version="3.9.8" />
+    <PackageReference Include="SpecFlow.Assist.Dynamic" Version="1.4.2" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.9.8" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.8" />
+	  <PackageReference Include="System.Configuration" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+	  <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+	  <PackageReference Include="xunit" Version="2.4.1" />
+	  <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HeartFramework\HeartFramework.csproj" />
+    <ProjectReference Include="..\HRSData\HRSData.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\Cache.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\Accounts.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\Agreements\Agreements.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\CoreServices\CoreServices.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\Agreements\agreementsDataSchema.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\CoreServices\DocumentService_Schema.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\CoreServices\ListService_Schema.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\CoreServices\ProfileService_Person_Schema.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\CoreServices\ProfileService_Organization_Schema.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\CoreServices\SampleDocuments\HeartReport_API_202202172326397798.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\CoreServices\SampleDocuments\ImageDocument.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\CoreServices\SampleDocuments\Sample_PasswordProtected_Doc.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\CoreServices\SampleDocuments\WordDoc1.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\CoreServices\tenantServiceDataSchema.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\Agreements\AGR_019_ValidateAgreementsAPI_Activities_RequestClarification.feature.cs">
+      <DependentUpon>AGR_019_ValidateAgreementsAPI_Activities_RequestClarification.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Agreements\AGR_021_ValidateAgreementsAPI_Activities_SendForSignatures.feature.cs">
+      <DependentUpon>AGR_021_ValidateAgreementsAPI_Activities_SendForSignatures.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Agreements\AGR_022_ValidateAgreementsAPI_Activities_SendForInternalSignature.feature.cs">
+      <DependentUpon>AGR_022_ValidateAgreementsAPI_Activities_SendForInternalSignature.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Agreements\AGR_023_ValidateAgreementsAPI_Activities_SendForExternalSignature.feature.cs">
+      <DependentUpon>AGR_023_ValidateAgreementsAPI_Activities_SendForExternalSignature.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Agreements\AGR_018_ValidateAgreementsAPI_Activities_RequestPIConcurrence.feature.cs">
+      <DependentUpon>AGR_018_ValidateAgreementsAPI_Activities_RequestPIConcurrence.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Agreements\AGR_020_ValidateAgreementsAPI_Activities_Finalize.feature.cs">
+      <DependentUpon>AGR_020_ValidateAgreementsAPI_Activities_Finalize.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Agreements\AGR_026_ValidateAgreementsAPI_Activities_Close.feature.cs">
+      <DependentUpon>AGR_026_ValidateAgreementsAPI_Activities_Close.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Agreements\AGR_024_ValidateAgreementsAPI_Activities_Activate.feature.cs">
+      <DependentUpon>AGR_024_ValidateAgreementsAPI_Activities_Activate.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Agreements\AGR_007_ValidateAgreementsAPI_Activities_Discard.feature.cs">
+      <DependentUpon>AGR_025_ValidateAgreementsAPI_Activities_Discard.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Agreements\AGR_017_ValidateAgreementsAPI_Activities_AssignOffice.feature.cs">
+      <DependentUpon>AGR_017_ValidateAgreementsAPI_Activities_AssignOffice.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\CoreServices\DocumentService\CS_002_Validate_DocumentVersioning.feature.cs">
+      <DependentUpon>CS_002_Validate_DocumentVersioning.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\CoreServices\DocumentService\CS_001_Validate_DocumentService.feature.cs">
+      <DependentUpon>CS_001_Validate_DocumentService.feature</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="Features\CoreServices\NotificationService\CS_001_Validate_NotificationService.feature.cs">
+      <DependentUpon>CS_001_Validate_NotificationService.feature</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="Features\CoreServices\ListService\POC_001_Validate_ListService.feature.cs">
+      <DependentUpon>POC_001_Validate_ListService.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\CoreServices\ProfileService\POC_001_Validate_ProfileService_Person.feature.cs">
+      <DependentUpon>POC_001_Validate_ProfileService_Person.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\CoreServices\ProfileService\POC_001_Validate_ProfileService_Organization.feature.cs">
+      <DependentUpon>POC_001_Validate_ProfileService_Organization.feature</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="Features\Agreements\AGR_001_ValidateAgreementsAPI_GeneralInformation.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\Agreements\AGR_019_ValidateAgreementsAPI_Activities_RequestClarification.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Agreements\AGR_021_ValidateAgreementsAPI_Activities_SendForSignatures.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Agreements\AGR_022_ValidateAgreementsAPI_Activities_SendForInternalSignature.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Agreements\AGR_023_ValidateAgreementsAPI_Activities_SendForExternalSignature.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Agreements\AGR_018_ValidateAgreementsAPI_Activities_RequestPIConcurrence.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Agreements\AGR_020_ValidateAgreementsAPI_Activities_Finalize.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Agreements\AGR_026_ValidateAgreementsAPI_Activities_Close.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Agreements\AGR_024_ValidateAgreementsAPI_Activities_Activate.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Agreements\AGR_025_ValidateAgreementsAPI_Activities_Discard.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Agreements\AGR_017_ValidateAgreementsAPI_Activities_AssignOffice.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\CoreServices\DocumentService\CS_002_Validate_DocumentVersioning.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+      <LastGenOutput>CS_001_Validate_DocumentService.feature.cs</LastGenOutput>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\CoreServices\DocumentService\CS_001_Validate_DocumentService.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+      <LastGenOutput>CS_001_Validate_DocumentService.feature.cs</LastGenOutput>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\CoreServices\NotificationService\CS_001_Validate_NotificationService.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+      <LastGenOutput>CS_001_Validate_NotificationService.feature.cs</LastGenOutput>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\CoreServices\ListService\POC_001_Validate_ListService.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+      <LastGenOutput>POC_001_Validate_ListService.feature.cs</LastGenOutput>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\CoreServices\ProfileService\POC_001_Validate_ProfileService_Person.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+      <LastGenOutput>POC_001_Validate_ProfileService_Organization.feature.cs</LastGenOutput>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\CoreServices\ProfileService\POC_001_Validate_ProfileService_Organization.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>POC_001_Validate_ProfileService_Organization.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Agreements\AGR_001_ValidateAgreementsAPI_GeneralInformation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AGR_001_ValidateAgreementsAPI_GeneralInformation.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

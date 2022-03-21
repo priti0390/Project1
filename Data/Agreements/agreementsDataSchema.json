@@ -1,0 +1,854 @@
+﻿{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "hrn": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "principalInvestigator": {
+          "type": "object",
+          "properties": {
+            "hrn": {
+              "type": "string"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            }
+          }
+        },
+        "primaryContact": {
+          "type": "object",
+          "properties": {
+            "hrn": {
+              "type": "string"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            }
+          }
+        },
+        "responsibleUnit": {
+          "type": "object",
+          "properties": {
+            "hrn": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "agreementType": {
+          "type": "object",
+          "properties": {
+            "hrn": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "firstDraftTobeGeneratedInternally": {
+          "type": "boolean"
+        },
+        "otherPersonnel": {
+          "type": [ "array", "null" ],
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "hrn": {
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "properties": {
+                "hrn": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+
+        "counterParties": {
+          "type": [ "array", "null" ],
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "person": {
+                  "type": "object",
+                  "properties": {
+                    "hrn": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "organization": {
+                  "type": "object",
+                  "properties": {
+                    "hrn": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "properties": {
+                "counterPartyName": {
+                  "type": "string"
+                },
+                "contactPersonName": {
+                  "type": "string"
+                },
+                "contactInformation": {
+                  "type": "object",
+                  "properties": {
+                    "addressLine1": {
+                      "type": "string"
+                    },
+                    "addressLine2": {
+                      "type": "string"
+                    },
+                    "stateProvince": {
+                      "type": "string"
+                    },
+                    "postalCode": {
+                      "type": "string"
+                    },
+                    "country": {
+                      "type": "string"
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "followUpDate": {
+          "type": "string"
+        },
+        "isPrivate": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "attachments": {
+          "type": [ "array", "null" ],
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "agreementDraftDocument": {
+          "type": "object",
+          "properties": {
+            "hrn": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+
+        "agreementTypeData": {
+          "type": "object",
+          "properties": {
+            "typeOfTrial": {
+              "type": "object",
+              "properties": {
+                "hrn": {
+                  "type": "string"
+                }
+              }
+            },
+            "directionMaterialTransfer": {
+              "type": "object",
+              "properties": {
+                "hrn": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": {
+              "type": "string"
+            },
+            "sowDescription": {
+              "type": "string"
+            },
+            "originOther": {
+              "type": "string"
+            },
+            "origin": {
+              "type": "object",
+              "properties": {
+                "hrn": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            },
+
+            "pocTechTransfer": {
+              "type": "object",
+              "properties": {
+                "hrn": {
+                  "type": "string"
+                }
+              }
+            },
+            "isSubjectToPatent": {
+              "type": "boolean"
+            },
+            "reimbursementAmount": {
+              "type": "number"
+            },
+            "isReimbursable": {
+              "type": "boolean"
+            },
+
+            "isExportingOutsideUsa": {
+              "type": "boolean"
+            },
+
+            "fundingProjectDocuments": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+
+            "exportingCountries": {
+              "type": [ "array", "null" ],
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "hrn": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "hrn": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "fundingProjects": {
+              "type": [ "array", "null" ],
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "projectType": {
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "projectType": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+
+            "sowDocuments": {
+              "type": [ "array", "null" ],
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "croContactPrimary": {
+              "type": [ "array", "null" ],
+              "properties": {
+                "person": {
+                  "type": "object",
+                  "properties": {
+                    "hrn": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "contactName": {
+                  "type": "string"
+                },
+                "contactPhone": {
+                  "type": "string"
+                },
+                "contactEmail": {
+                  "type": "string"
+                }
+              }
+            },
+            "ctaMaterials": {
+              "type": [ "array", "null" ],
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "materialType": {
+                      "type": "object",
+                      "properties": {
+                        "hrn": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "useInTrial": {
+                      "type": "object",
+                      "properties": {
+                        "hrn": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "materialDescription": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "doesThisInvolveSubrecipients": {
+              "type": "boolean"
+            },
+            "subrecipientsOrganizations": {
+              "type": [ "array", "null" ],
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "organization": {
+                      "type": "object",
+                      "properties": {
+                        "hrn": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "organizationName": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "doesThisInvolveOtherMaterials": {
+              "type": "boolean"
+            },
+            "ctaMaterialsOther": {
+              "type": [ "array", "null" ],
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "materialType": {
+                      "type": "object",
+                      "properties": {
+                        "hrn": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "materialDescription": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+
+            "sowFundingProjects": {
+              "type": [ "array", "null" ],
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "projectType": {
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "projectType": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+
+            "sowFundingProjectOther": {
+              "type": "string"
+            },
+
+            "sowProjectDocuments": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+
+            "sowFundSource": {
+              "type": "object",
+              "properties": {
+                "hrn": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            },
+
+            "purposeOfInformationExchange": {
+              "type": "object",
+              "properties": {
+                "hrn": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "purposeOfInformationExchangeOther": {
+              "type": "string"
+            },
+            "directionOfInformationTransfer": {
+              "type": "object",
+              "properties": {
+                "hrn": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "descriptionOfConfidentialInformation": {
+              "type": "string"
+            },
+            "hasConfidentialInformationDisclosed": {
+              "type": "boolean"
+            },
+            "phaseOfStudy": {
+              "type": "object",
+              "properties": {
+                "hrn": {
+                  "type": "string"
+                }
+              }
+            },
+            "sponsorProtocolNumber": {
+              "type": "string"
+            },
+            "protocolTitle": {
+              "type": "string"
+            },
+            "protocolDocument": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            },
+            "consentFormsDocuments": {
+              "type": [ "array", "null" ],
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+
+            "isStudyPartOfCooperativeGroup": {
+              "type": "boolean"
+            },
+            "croContactsOther": {
+              "type": [ "array", "null" ],
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "person": {
+                      "type": "object",
+                      "properties": {
+                        "hrn": {
+                          "type": "string"
+                        },
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "contactName": {
+                      "type": "string"
+                    },
+                    "contactPhone": {
+                      "type": "string"
+                    },
+                    "contactEmail": {
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "person": {
+                      "type": "object",
+                      "properties": {
+                        "hrn": {
+                          "type": "string"
+                        },
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "person": {
+                      "type": "object",
+                      "properties": {
+                        "hrn": {
+                          "type": "string"
+                        },
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "contactName": {
+                      "type": "string"
+                    },
+                    "contactPhone": {
+                      "type": "string"
+                    },
+                    "contactEmail": {
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "person": {
+                      "type": "object",
+                      "properties": {
+                        "hrn": {
+                          "type": "string"
+                        },
+                        "firstName": {
+                          "type": "string"
+                        },
+                        "lastName": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "contactName": {
+                      "type": "string"
+                    },
+                    "contactPhone": {
+                      "type": "string"
+                    },
+                    "contactEmail": {
+                      "type": "string"
+                    }
+                  }
+                }
+              ]
+            },
+            "croOther": {
+              "type": "string"
+            },
+
+            "isReimbursementTobeProvided": {
+              "type": "boolean"
+            },
+            "willUseCro": {
+              "type": "boolean"
+            },
+            "cro": {
+              "type": "object",
+              "properties": {
+                "hrn": {
+                  "type": "string"
+                }
+              }
+            },
+            "active": {
+              "type": "boolean"
+            },
+            "dateCreated": {
+              "type": "string"
+            },
+            "dateModified": {
+              "type": "string"
+            }
+
+          }
+        },
+        "owner": {
+          "type": "object",
+          "properties": {
+            "hrn": {
+              "type": "string"
+            }
+          }
+        },
+        "signatureType": {
+          "type": "object",
+          "properties": {
+            "hrn": {
+              "type": "string"
+            }
+          }
+        },
+        "signatureTransition": {
+          "type": "object",
+          "properties": {
+            "hrn": {
+              "type": "string"
+            }
+          }
+        },
+        "agreementDraft": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        },
+        "comments": {
+          "type": "string"
+        },
+        "commentsConcurrenceResponse": {
+          "type": "string"
+        },
+        "commentsConcurrenceRequest": {
+          "type": "string"
+        },
+        "isEarlyTermination": {
+          "type": "boolean"
+        },
+        "commentsClarificationRequest": {
+          "type": "string"
+        },
+        "effectiveDate": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+

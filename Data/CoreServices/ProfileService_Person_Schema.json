@@ -1,0 +1,126 @@
+﻿{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "honorific": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "null"
+        },
+        "ORCID": {
+          "type": "null"
+        },
+        "employer": {
+          "type": "object",
+          "properties": {
+            "hrn": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "department": {
+          "type": "object",
+          "properties": {
+            "hrn": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "division": {
+          "type": "object",
+          "properties": {
+            "hrn": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "sourceIdentifier": {
+          "type": "string"
+        },
+        "contactInformation": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "postalCode": {
+              "type": "string"
+            },
+            "phoneNumber": {
+              "type": "string"
+            },
+            "addressLine1": {
+              "type": "string"
+            },
+            "emailAddress": {
+              "type": "string"
+            }
+          }
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "dateCreated": {
+          "type": "string"
+        },
+        "dateModified": {
+          "type": "string"
+        },
+        "earnedDegrees": {
+          "type": "null"
+        },
+        "employeeId": {
+          "type": "null"
+        },
+        "custom_properties": {
+          "type": "null"
+        },
+        "tags": {
+          "type": "null"
+        },
+        "roles": {
+          "type": "null"
+        },
+        "hrn": {
+          "type": "null"
+        }
+      }
+    },
+    "links": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "hrn": {
+          "type": "string"
+        },
+        "currentVersion": {
+          "type": "integer"
+        },
+        "Url": {
+          "type": "string"
+        },
+        "OwningEntityHrn": {
+          "type": "string"
+        },
+          "sourceVersion": {
+            "type": "integer"
+          },
+          "compareVersion": {
+            "type": "integer"
+          },
+          "locked": {
+            "type": "boolean"
+          },
+          "acceptExistingChanges": {
+            "type": "boolean"
+          },
+          "owningService": {
+            "type": "string"
+          },
+          "sourceHrn": {
+            "type": "string"
+          },
+          "owningEntityHrn": {
+            "type": "string"
+          },
+          "compareHrn": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "versions": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "fileName": {
+                    "type": "string"
+                  },
+                  "contentType": {
+                    "type": "string"
+                  },
+                  "personHrn": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "integer"
+                  },
+                  "versionAction": {
+                    "type": "string"
+                  },
+                  "versionActionDescription": {
+                    "type": "string"
+                  },
+                  "dateCreated": {
+                    "type": "string"
+                  },
+                  "sourceHrn": {
+                    "type": "null"
+                  },
+                  "sourceVersion": {
+                    "type": "integer"
+                  },
+                  "sourceAction": {
+                    "type": "null"
+                  }
+                }
+              }
+            ]
+          }
+        }
+    }
+  }
+}

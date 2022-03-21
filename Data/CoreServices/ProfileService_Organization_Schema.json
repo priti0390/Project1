@@ -1,0 +1,140 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "alias": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "sourceIdentifier": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "contactInformation": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            },
+            "website": {
+              "type": "string"
+            },
+            "postalCode": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "addressLine1": {
+              "type": "string"
+            },
+            "addressLine2": {
+              "type": "string"
+            },
+            "stateProvince": {
+              "type": "string"
+            }
+          }
+        },
+        "category": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "hrn": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "dateCreated": {
+              "type": "string"
+            },
+            "dateModified": {
+              "type": "string"
+            }
+          }
+        },
+        "functions": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "hrn": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "dateCreated": {
+                  "type": "string"
+                },
+                "dateModified": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "dateCreated": {
+          "type": "string"
+        },
+        "dateModified": {
+          "type": "string"
+        },
+        "customProperties": {
+          "type": "null"
+        },
+        "tags": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "parent": {
+          "type": "null"
+        },
+        "hrn": {
+          "type": "string"
+        }
+      }
+    },
+    "links": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "displayOrder": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "defaultItemPermissions": {
+          "type": "object",
+          "properties": {
+            "fullAccess": {
+              "type": "boolean"
+            },
+            "editLockedItem": {
+              "type": "null"
+            },
+            "editUnlockedItem": {
+              "type": "boolean"
+            },
+            "createUnlockedItem": {
+              "type": "boolean"
+            },
+            "deleteUnlockedItem": {
+              "type": "boolean"
+            }
+          }
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "customPropertiesSchema": {
+          "type": "null"
+        },
+        "dateCreated": {
+          "type": "string"
+        },
+        "dateModified": {
+          "type": "string"
+        },
+        "hrn": {
+          "type": "string"
+        }
+      }
+    },
+    "links": {
+      "type": "object"
+    }
+  }
+}

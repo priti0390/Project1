@@ -1,0 +1,42 @@
+﻿{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "legacyId": {
+      "type": [ "string","null" ]
+    },
+    "name": {
+      "type": [ "string", "null" ]
+    },
+    "existingUrls": {
+      "type": [ "array", "null" ],
+      "items": [
+        {
+          "type": [ "object" ],
+          "properties": {
+            "url": {
+              "type": [ "string", "null" ]
+            }
+          }
+        }
+      ]
+    },
+    "address": {
+      "type": [ "string", "null" ]
+    },
+    "email": {
+      "type": [ "string", "null" ]
+    },
+    "phone": {
+      "type": [ "string", "null" ]
+    },
+    "code": {
+      "type": [ "string", "null" ]
+    },
+    "cognitoUserPoolId": {
+      "type": [ "string", "null" ]
+    }
+  }
+}
