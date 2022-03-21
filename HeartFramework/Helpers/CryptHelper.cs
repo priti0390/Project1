@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace HeartFramework.Helpers
 {
-    static class CryptHelper
+    public static class CryptHelper
     {
         public static string DecryptString(string encrString)
         {

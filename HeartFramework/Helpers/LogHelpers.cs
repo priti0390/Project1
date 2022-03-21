@@ -9,7 +9,7 @@ namespace HeartFramework.Helpers
     public class LogHelpers
     {
         //Global Declaration
-        private static string _logFileName = "Log_" + Settings.TimeStamp;
+        public static string _logFileName = "Log_" + Settings.TimeStamp;
         private static StreamWriter _streamw = null;
 
         //Create a file which can store the log information
@@ -17,15 +17,10 @@ namespace HeartFramework.Helpers
         {
             try
             {
-                string dir = Settings.LogPath;
-                if (Directory.Exists(dir))
-                {
-                    _streamw = File.AppendText(dir + _logFileName);
-                }
-                else
+                string dir = Settings.ReportPath;
+                if (!Directory.Exists(dir))
                 {
                     Directory.CreateDirectory(dir);
-                    _streamw = File.AppendText(dir + _logFileName);
                 }
                 _streamw = File.AppendText(Settings.ReportPath + _logFileName);
             }catch(Exception e)

@@ -15,7 +15,7 @@ namespace HeartFramework.Helpers
     public class ExcelHelpers
     {
 
-        private static Dictionary<string, List<Datacollection>> _dataColList = new Dictionary<string, List<Datacollection>>();
+        public static Dictionary<string, List<Datacollection>> _dataColList = new Dictionary<string, List<Datacollection>>();
 
         //private List<Datacollection> _dataCol = new List<Datacollection>();
 
@@ -56,7 +56,7 @@ namespace HeartFramework.Helpers
         {
             try
             {
-
+                System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
                 using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read))
                 {
                     using (var reader = ExcelReaderFactory.CreateReader(stream))
@@ -212,7 +212,7 @@ namespace HeartFramework.Helpers
             }
             catch (Exception e)
             {
-                ReportingHelpers.ChildTest.Fail("User not able to find the data for the row: " + ScenarioContext.Current.ScenarioInfo.Title);
+                ////ReportingHelpers.ChildTest.Fail("User not able to find the data for the row: " + ScenarioContext.Current.ScenarioInfo.Title);
                 Assert.Fail();
                 return null;
             }

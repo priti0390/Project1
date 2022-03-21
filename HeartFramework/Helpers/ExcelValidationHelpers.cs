@@ -231,7 +231,7 @@ namespace HeartFramework.Helpers
             }
             catch (Exception e)
             {
-                ReportingHelpers.ChildTest.Fail("User not able to find the data for the row: " + ScenarioContext.Current.ScenarioInfo.Title);
+                ////ReportingHelpers.ChildTest.Fail("User not able to find the data for the row: " + ScenarioContext.Current.ScenarioInfo.Title);
                 Assert.Fail();
                 return null;
             }

@@ -22,8 +22,8 @@ namespace HeartFramework.Config
         [ConfigurationProperty("aut3", IsRequired = true)]
         public string AUT3 { get { return (string)base["aut3"]; } }
 
-        [ConfigurationProperty("browser", IsRequired = true)]
-        public string Browser { get { return (string)base["browser"]; } }
+        [ConfigurationProperty("jsonfilepath", IsRequired = true)]
+        public string jsonfilepath { get { return (string)base["jsonfilepath"]; } }
 
         [ConfigurationProperty("testType", IsRequired = true)]
         public string TestType { get { return (string)base["testType"]; } }
@@ -42,5 +42,13 @@ namespace HeartFramework.Config
 
         [ConfigurationProperty("testData", IsRequired = true)]
         public string TestData { get { return (string)base["testData"]; } }
+
+        [ConfigurationProperty("csvTestData")]
+        public string CsvTestData { get { return (string)base["csvTestData"]; } }
+
+        [ConfigurationProperty("jsonTestData")]
+        public string JsonTestData { get { return (string)base["jsonTestData"]; } }
+
     }
 }
+

@@ -61,7 +61,7 @@ namespace HeartFramework.Helpers
             {
                 Directory.CreateDirectory(filePath);
                 xDoc.Save(filePath);
-                ReportingHelpers.ChildTest.Info(E);
+                ////ReportingHelpers.ChildTest.Info(E);
 
             }
         }
