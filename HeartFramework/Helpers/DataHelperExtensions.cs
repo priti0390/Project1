@@ -1,0 +1,86 @@
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace HeartFramework.Helpers
+{
+    public static class DataHelperExtensions
+    {
+        /// <summary>
+        /// Open the connection
+        /// </summary>
+        public static SqlConnection DBConnect(this SqlConnection sqlConnection, string connectionString)
+        {
+            try
+            {
+                sqlConnection = new SqlConnection(connectionString);
+                sqlConnection.Open();
+                return sqlConnection;
+            }
+            catch (Exception e)
+            {
+                LogHelpers.error(e.Message);
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Closing the connection
+        /// </summary>
+        public static void DBClose(this SqlConnection sqlConnection)
+        {
+            try
+            {
+                sqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                LogHelpers.error(e.Message);
+            }
+        }
+
+
+        /// <summary>
+        /// Execute a Query
+        /// </summary>
+        public static DataTable ExecuteQuery(this SqlConnection sqlConnection, string queryString)
+        {
+
+            DataSet dataset;
+            try
+            {
+                //Checking the state of the connection
+                if (sqlConnection == null || ((sqlConnection != null && (sqlConnection.State == ConnectionState.Closed ||
+                    sqlConnection.State == ConnectionState.Broken))))
+                    sqlConnection.Open();
+
+                SqlDataAdapter dataAdaptor = new SqlDataAdapter();
+                dataAdaptor.SelectCommand = new SqlCommand(queryString, sqlConnection);
+                dataAdaptor.SelectCommand.CommandType = CommandType.Text;
+
+                dataset = new DataSet();
+                dataAdaptor.Fill(dataset, "table");
+                sqlConnection.Close();
+                return dataset.Tables["table"];
+            }
+            catch (Exception e)
+            {
+                dataset = null;
+                sqlConnection.Close();
+                LogHelpers.error(e.Message);
+                return null;
+            }
+            finally
+            {
+                sqlConnection.Close();
+                dataset = null;
+            }
+
+
+        }
+
+
+
+    }
+}
