@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = HeartFramework
-build_property.ProjectDir = C:\Azure\QA_HeartFramework_GUI\Heart\HeartFramework\
+build_property.ProjectDir = c:\azure\qa_heartframework_gui\heart\HeartFramework\

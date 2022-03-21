@@ -1,14 +1,12 @@
 ﻿using HeartFramework.Helpers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using OpenQA.Selenium.Support;
+using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using SeleniumExtras.PageObjects;
 
 namespace HeartFramework.Base
 {

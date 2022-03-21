@@ -154,7 +154,7 @@
             },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
-              "version": "[96.0.4664.4500, )"
+              "version": "[99.0.4844.5100, )"
             },
             "SoftAssertion": {
               "target": "Package",
@@ -199,6 +199,10 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.11.1, )"
+            },
+            "System.Runtime.InteropServices": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             },
             "System.Windows.Forms": {
               "target": "Package",
