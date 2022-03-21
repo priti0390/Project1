@@ -1,0 +1,42 @@
+trigger:
+  - staging
+
+pool:
+  name: DEV
+  demands:
+  - serverrole -equals build
+  - awstoolkit
+  - nuget
+  - dotnet
+  - Chrome
+
+variables:
+  - group: HRS-GlobalCommon
+  - name: Version.BuildNumber
+    value: $[counter(variables['Version.MajorMinor'], 0)]
+    # semvernumber variable defined in variables section as dynamic value in this PowerShell script task
+  - name: semvernumber
+    value: $(Version.MajorMinor).$(Version.HotfixNumber).$(Version.BuildNumber)
+  - name: configuration
+    value: $(Build.Configuration)
+
+stages:
+- stage: Build
+  jobs:
+  - job:
+    steps:
+
+    - task: PowerShell@2
+      displayName: 'Run build.ps1'
+      inputs:
+        targetType: 'inline'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/Heart'
+        script: |
+          ./build.ps1 -Version $(semvernumber) -Configuration $(configuration)
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish HeartTest build artifacts'
+      inputs:
+        PathtoPublish: '$(System.DefaultWorkingDirectory)/Heart/HeartTest/bin/$(configuration)'
+        ArtifactName: 'HeartTest'
+        publishLocation: 'Container'
